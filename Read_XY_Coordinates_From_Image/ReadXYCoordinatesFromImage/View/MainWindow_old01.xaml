@@ -1,0 +1,27 @@
+﻿<Window x:Class="ReadXYCoordinatesFromImage.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Aplikacja do zaczytywania współrzędnych (x,y) z wykresu krzywej"
+        Height="550" Width="650">
+    <DockPanel >
+        <Menu DockPanel.Dock="Top" Height="23">
+            <MenuItem Header="_File" >
+                <MenuItem Header="Exit" Command="{Binding ExitCommand}" />
+            </MenuItem>
+        </Menu>
+        <StackPanel DockPanel.Dock="Top" Height="60" Orientation="Horizontal">
+            <Button  Command="{Binding LoadImageCommand}" Content="Load Image File" Width="140" Margin="10,5"/>
+            <Button  Command="{Binding SaveCommand}" IsEnabled="{Binding ImageModel.IsProcessingButtonEnabled}" Content="Save (x,y) coordinates" Width="140" Margin="10,5"/>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="textBox1" Grid.Column="0" Margin="10,10" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="NoWrap" />
+            <!--<Border Grid.Column="1" BorderBrush="Gray" BorderThickness="2" HorizontalAlignment="Right" Width="130" Margin="0,10,0,153">-->
+                <Image Name="ImageViewer1" MinHeight="256" MinWidth="256" />
+            
+        </Grid>
+    </DockPanel>
+</Window>

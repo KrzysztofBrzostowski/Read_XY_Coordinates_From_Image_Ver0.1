@@ -1,0 +1,15 @@
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\bin\Debug\ReadXYCoordinatesFromImage.exe.config
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\bin\Debug\ReadXYCoordinatesFromImage.exe
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\bin\Debug\ReadXYCoordinatesFromImage.pdb
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage.csprojResolveAssemblyReference.cache
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\View\MainWindow.baml
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\RibbonTest.baml
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\View\MainWindow.g.cs
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\RibbonTest.g.cs
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\App.g.cs
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage_MarkupCompile.cache
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage.g.resources
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage.Properties.Resources.resources
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage.csproj.GenerateResource.Cache
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage.exe
+E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage.pdb

@@ -1,0 +1,44 @@
+﻿<Window x:Class="ReadXYCoordinatesFromImage.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Read (x,y) coordinates from the graphical diagram"
+        Height="550" Width="750">
+    <DockPanel >
+        <Menu DockPanel.Dock="Top" Height="23">
+            <MenuItem Header="_File" >
+                <MenuItem Header="Exit" Command="{Binding ExitCommand}" />
+            </MenuItem>
+            <MenuItem Header="_Help" >
+                <MenuItem Header="WARNING" Command="{Binding WarningCommand}" />
+            </MenuItem>
+        </Menu>
+        <StackPanel DockPanel.Dock="Top" Height="60" Orientation="Horizontal">
+            <Button  Command="{Binding LoadImageCommand}" Content="Load Image File" Width="140" Margin="10,5"/>
+            <Button  Command="{Binding SaveCommand}" IsEnabled="{Binding ImageModel.IsSaveButtonEnabled}" Content="Save (x,y) coordinates" Width="140" Margin="10,5"/>
+        </StackPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <Label x:Name="label1" Height="30" Width="150" Content="Loaded (x,y) coordinates :"></Label>
+                <TextBox Height="370" Name="textBox1"  Margin="10,0,10,0" IsReadOnly="True" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="NoWrap" />
+                <Label x:Name="label2" Height="30" Width="140" Content="{Binding ImageModel.NumberOfTxtRow}"/>
+            </StackPanel>
+            <!--
+            <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="2" HorizontalAlignment="Right" Width="130" Margin="0,10,0,153">
+                <Image Name="ImageViewer1" MinHeight="256" MinWidth="256" />
+            </Border>-->
+            <Grid Grid.Column="1" Margin="10,30">
+                <Border BorderBrush="BlueViolet" BorderThickness="6">
+                    <Image Name="ImageViewer1" MinHeight="300" MinWidth="400" />
+                </Border>
+            </Grid>
+        </Grid>
+
+
+
+    </DockPanel>
+</Window>

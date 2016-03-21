@@ -105,10 +105,10 @@ namespace ReadXYCoordinatesFromImage.ViewModel
 
                 if (bitmapImage.Format.BitsPerPixel == 32)
                 {
-                    for (long y = 0; y < heightOfImage; y++)
+                    for (long x = 0; x < widthOfImage; x++)
                     {
-                        if (y < 10) { y_str = "0" + y; } else { y_str = y.ToString(); }
-                        for (long x = 0; x < widthOfImage; x++)
+                        if (x < 10) { x_str = "0" + x; } else { x_str = x.ToString(); }
+                        for (long y = 0; y < heightOfImage; y++)                        
                         {
                             offset = y * widthOfImage * 4 + x * 4;
                             blue = pixelByteArray[offset + 0];
@@ -117,7 +117,7 @@ namespace ReadXYCoordinatesFromImage.ViewModel
                             if (blue == 0 && green == 0 && red == 0)//color black
                             {
                                 founded++;
-                                if (x < 10) { x_str = "0" + x; } else { x_str = x.ToString(); }
+                                if (y < 10) { y_str = "0" + y; } else { y_str = y.ToString(); }
                                 sb.AppendLine("(" + x_str + "," + y_str + ")");
                                 continue;
                             }
@@ -127,17 +127,17 @@ namespace ReadXYCoordinatesFromImage.ViewModel
                 else
                     if (bitmapImage.Format.BitsPerPixel == 8)
                     {
-                        for (long y = 0; y < heightOfImage; y++)
+                        for (long x = 0; x < widthOfImage; x++)
                         {
-                            if (y < 10) { y_str = "0" + y; } else { y_str = y.ToString(); }
-                            for (long x = 0; x < widthOfImage; x++)
+                            if (x < 10) { x_str = "0" + x; } else { x_str = x.ToString(); }
+                            for (long y = 0; y < heightOfImage; y++)                            
                             {
                                 offset = y * widthOfImage * 1 + x * 1;
                                 color = pixelByteArray[offset];
                                 if (color == 0)
                                 {
+                                    if (y < 10) { y_str = "0" + y; } else { y_str = y.ToString(); }
                                     founded++;
-                                    if (x < 10) { x_str = "0" + x; } else { x_str = x.ToString(); }
                                     sb.AppendLine("(" + x_str + "," + y_str + ")");
                                     continue;
                                 }

@@ -1,7 +1,6 @@
 E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\bin\Debug\ReadXYCoordinatesFromImage.exe.config
 E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\bin\Debug\ReadXYCoordinatesFromImage.exe
 E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\bin\Debug\ReadXYCoordinatesFromImage.pdb
-E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\ReadXYCoordinatesFromImage.csprojResolveAssemblyReference.cache
 E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\View\MainWindow.baml
 E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\RibbonTest.baml
 E:\Biezace10-2015\Read_XY_Coordinates_From_Image\ReadXYCoordinatesFromImage\obj\Debug\View\MainWindow.g.cs

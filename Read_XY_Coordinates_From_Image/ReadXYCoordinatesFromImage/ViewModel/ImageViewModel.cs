@@ -94,6 +94,7 @@ namespace ReadXYCoordinatesFromImage.ViewModel
                 if (m_MainWindow.Width <= widthOfImage) { m_MainWindow.Width = widthOfImage + 250; }
 
                 long offset = 0;
+                long yModified = 0;
                 byte blue = 0;
                 byte green = 0;
                 byte red = 0;
@@ -108,7 +109,7 @@ namespace ReadXYCoordinatesFromImage.ViewModel
                     for (long x = 0; x < widthOfImage; x++)
                     {
                         if (x < 10) { x_str = "0" + x; } else { x_str = x.ToString(); }
-                        for (long y = 0; y < heightOfImage; y++)                        
+                        for (long y = heightOfImage-1; y >=0 ; y--)                        
                         {
                             offset = y * widthOfImage * 4 + x * 4;
                             blue = pixelByteArray[offset + 0];
@@ -117,7 +118,8 @@ namespace ReadXYCoordinatesFromImage.ViewModel
                             if (blue == 0 && green == 0 && red == 0)//color black
                             {
                                 founded++;
-                                if (y < 10) { y_str = "0" + y; } else { y_str = y.ToString(); }
+                                yModified = heightOfImage - y - 1;
+                                if (yModified < 10) { y_str = "0" + yModified; } else { y_str = yModified.ToString(); }
                                 sb.AppendLine("(" + x_str + "," + y_str + ")");
                                 continue;
                             }
@@ -130,14 +132,15 @@ namespace ReadXYCoordinatesFromImage.ViewModel
                         for (long x = 0; x < widthOfImage; x++)
                         {
                             if (x < 10) { x_str = "0" + x; } else { x_str = x.ToString(); }
-                            for (long y = 0; y < heightOfImage; y++)                            
+                            for (long y = heightOfImage-1; y >=0; y--)                            
                             {
                                 offset = y * widthOfImage * 1 + x * 1;
                                 color = pixelByteArray[offset];
                                 if (color == 0)
-                                {
-                                    if (y < 10) { y_str = "0" + y; } else { y_str = y.ToString(); }
+                                {                                    
                                     founded++;
+                                    yModified = heightOfImage - y - 1;
+                                    if (yModified < 10) { y_str = "0" + yModified; } else { y_str = yModified.ToString(); }
                                     sb.AppendLine("(" + x_str + "," + y_str + ")");
                                     continue;
                                 }
@@ -167,7 +170,7 @@ namespace ReadXYCoordinatesFromImage.ViewModel
         private void SaveAction(Object parameter)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.FileName = "XY_Coordinates_" + DateTime.Now.Ticks;
+            saveFileDialog.FileName = string.Format(System.Globalization.CultureInfo.InvariantCulture, "XY_Coordinates_{0:yyyy-MM-dd_HH_mm_ss}", DateTime.Now); 
             saveFileDialog.DefaultExt = ".txt";
             saveFileDialog.Filter = "Text Files (.txt)|*.txt";
             Nullable<bool> result = saveFileDialog.ShowDialog();

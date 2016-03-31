@@ -53,7 +53,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="RibbonTest.xaml.cs" />
     <Compile Include="Utilities\CommandBase.cs" />
     <Compile Include="ViewModel\ImageViewModel.cs" />
     <Page Include="View\MainWindow.xaml">
@@ -68,10 +67,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="RibbonTest.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\ImageProcessingModel.cs" />

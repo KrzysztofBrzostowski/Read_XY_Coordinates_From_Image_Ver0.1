@@ -1,0 +1,14 @@
+﻿<Window x:Class="ReadXYCoordinatesFromImage.View.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="500" Width="500">
+    <DockPanel>
+        <Button Content="Save" DockPanel.Dock="Bottom" Width="150" Click="Button_Click" />
+   
+        <Canvas x:Name="paintSurface">
+            <Canvas.Background>
+            <SolidColorBrush Color="White" Opacity="0"/>
+            </Canvas.Background>
+        </Canvas>
+    </DockPanel>
+</Window>
